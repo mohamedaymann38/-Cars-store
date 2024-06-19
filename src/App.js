@@ -12,20 +12,20 @@ import 'swiper/css/navigation';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const App = () => {
-  // const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000);
-  // }, [])
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [])
   return (
     <BrowserRouter>
       
-    {/* {loading ?
+    {loading ?
       <div className="preloaderr">
         <PacmanLoader color={'#ffb426'} loading={loading} size={40} margin={10} />
-      </div> : */}
+      </div> :
 
       <>
         <NNavBar/>
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
         </Routes>
       </>
-{/* } */}
+ } 
   </BrowserRouter>
     
   )
