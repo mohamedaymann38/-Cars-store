@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{  
+  background-color:black;
+    overflow-x: hidden;
+  height: 2500px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.preloaderr {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:white;
+}
+.navbar{
+  background-color: #ff6400;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 5;
+  padding: 0;
+  list-style-type: none;
+}
+.phonenavbar{
+margin-left: 40px;
+}
+.locationnavbar{
+  margin-left: 40px
+}
+.navlinkss {
+  font-size: 25px;
+    width: em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.5s;
+    margin: 0.8em;
+ 
+}
+.navlinkss::before,
+.navlinkss::after{
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+.navlinkss::before {left: 0; z-index: -1;}
+.navlinkssi::after {right: 0; z-index: -2;}
+
+.navlinkss:hover {
+    color: white;
+}
+
+.navlinkss:hover::before,
+.navlinkssi:hover::after {
+    width: 110%;
+    height: 110%;
+    border-radius:10%;
+    color: black;
+    background-color: white;
+}
+
+.navlinkss:hover::before {
+    top: 0;
+}
+
+.navlinkss:hover::after {
+    right: -0.4em;
+    filter: brightness(0.8);
+
+}
+.sec1{
+
+position: relative;
+top: 80px;
+height: 570px;
+left: 0;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+} 
+ .autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+.sec2{
+  background-color: #0c0c0c;
+  position: relative;
+  top:150px;
+  height: 340px;
+}
+.bannartext{
+  position: absolute;
+  top: 15%;
+left: 60%;
+font-family: sans-serif;
+color: #fff;
+}
+.bannartext h2{
+  font-size: 50px;
+}
+.bannartext p{
+  font-size: large;
+}
+.bannarimg{
+  position: absolute;
+
+}
+.sec2lambo{
+  position: absolute;
+  left: -90px;
+  width: 800px;
+} 
+.sec3{
+  background-color: #0c0c0c;
+  position: relative;
+  top: 200px;
+  height: 400px;
+}
+.sec3 div{
+  width: 100%;
+ margin: auto;
+ 
+}
+.sec3 h5{
+color: #737373;
+}
+.sec3 h3 span{
+  color: #ff6400;
+}
+.sec3 h3{
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.firstcar img{
+  width: 300px;
+  height: 225px;
 }
+.secondcar img{
+  width: 300px;
+  height: 225px;
+}
+.thirdcar img{
+  width: 300px;
+  height: 225px;
+}
+.fourthcar img{
+  width: 300px;
+  height: 225px;
+}
+.sec3 a{
+  text-decoration: none;
+  color: #ff6400;
+}
+.sec4{
+  position: relative;
+  top: 250px;
+width: 100%;
+height: 500px;
+}
+.sec4 img{
+  position: absolute;
+  top: 80px;
+  left: 0;
+height: 300px;
+}
+.sec4text{
+  position: absolute;
+  top: 90px;
+  left: 700px;
+color: #fff;
+font-family: sans-serif;
+}
+.sec4text button{
+  margin: 20px;
+}
+.sec5 {
+  position: relative;
+  top: 250px;
+  height: 300px;
+}
+.background{
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.background h1{
+  font-size: 170px;
+ opacity: 30;
+ font-family: sans-serif;
+}
+.sec5img img{
+position: absolute;
+top: 215px;
+left: 70px;
+width: 95%;
+height: 40%;
+}
+.footer {
+  position: relative;
+  top: 400px;
+  background-color: #0c0c0c;
+color: #fff;
+  /* height: 200px; */
+}
+.footer a {
+  display: inline-block;
+  color: hsla(0, 6%, 49%, 0.75);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 10px 5px;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (max-width:768px){
+  .sec1 img{
+    width: 500px;
+    object-fit: fill;
+ }
+.sec2lambo{
+  position: absolute;
+  top: 240px;
+}
+ .bannartext{
+  position: absolute;
+  left: 0;
+top: 0;
+ }
+ .sec3{
+  position: relative;
+  top: 400px;
+ 
+ }
+ /* .sec3 div{
+  margin: 20px;
+ } */
+ .sec3 img{
+width: 125px;
+ }
+.thirdcar h3{
+  font-size: 20px;
+}
+.sec4 {
+  height: 750px;
+  position: relative;
+  top: 450px;
+}
+.sec4 img{
+position: absolute;
+top: 0px;
+}
+.sec4text{
+  position: absolute;
+left: 1%;
+  top: 300px;
+  color: #fff;
+
+}
+.sec5{
+  position: relative;
+  top:400px;
+  height: 500px;
+}
+.sec5img img{
+  position: absolute;
+  left: 0px;
+ width: 600px;
+}
 }
